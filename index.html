@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#070b14">
 <meta name="description" content="Mythical Studios — creative technology, AI, gaming and digital experiences.">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<style>
+html,body{min-height:100%;background:#060912}
+@media(max-width:540px){
+  body{min-width:0;overflow-x:hidden}
+  #loader{min-height:100dvh}
+  .hero-visual{height:190px}
+  .hero{min-height:0}
+  .modal{padding:12px}
+  .modal-box{max-height:88dvh;overflow-y:auto;-webkit-overflow-scrolling:touch}
+}
+</style>
 <title>Mythical Studios — Build. Create. Imagine.</title>
 <style>
 :root{--bg:#060912;--panel:#0c1220;--panel2:#111a2d;--text:#f7f9ff;--muted:#9ba8c2;--line:rgba(255,255,255,.09);--accent:#8b7cff;--cyan:#37d6ff;--green:#63e6be;--max:1160px}
@@ -162,7 +175,7 @@ function closeProject(){projectModal.classList.remove("open");document.body.clas
 document.querySelectorAll(".project").forEach(card=>card.addEventListener("click",()=>openProject(card.dataset.project)));projectModal.addEventListener("click",e=>{if(e.target===projectModal)closeProject()});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeProfile();closeProject()}});
 
-window.addEventListener("load",()=>{setTimeout(()=>document.getElementById("loader").classList.add("loaded"),650);setTimeout(()=>{document.getElementById("toast").classList.add("show");setTimeout(()=>document.getElementById("toast").classList.remove("show"),2600)},1000)});
+function bootSite(){const loader=document.getElementById("loader");if(loader)loader.classList.add("loaded");setTimeout(()=>{const toast=document.getElementById("toast");if(toast){toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),2600)}},350)}document.addEventListener("DOMContentLoaded",()=>setTimeout(bootSite,120));setTimeout(bootSite,1800);
 window.addEventListener("scroll",()=>{const h=document.documentElement.scrollHeight-innerHeight;document.getElementById("progress").style.width=(scrollY/h*100)+"%"});
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.12});document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
 const counts=document.querySelectorAll("[data-count]");let counted=false;const statObs=new IntersectionObserver(entries=>{if(entries[0].isIntersecting&&!counted){counted=true;counts.forEach(el=>{const target=+el.dataset.count;let n=0;const timer=setInterval(()=>{n++;el.textContent=n;if(n>=target)clearInterval(timer)},90)})}},{threshold:.6});statObs.observe(document.querySelector(".stats"));
