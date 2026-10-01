@@ -4,55 +4,119 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#080b14">
+<meta name="description" content="Mythical Studios — creative technology, AI, gaming and digital experiences.">
 <title>Mythical Studios — Build. Create. Imagine.</title>
 <style>
-:root{--bg:#080b14;--card:#101625;--text:#f7f8ff;--muted:#9ba6bc;--accent:#8b7cff;--line:rgba(255,255,255,.1)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{text-decoration:none;color:inherit}.wrap{width:min(1100px,calc(100% - 36px));margin:auto}
-nav{position:sticky;top:0;z-index:10;background:rgba(8,11,20,.92);border-bottom:1px solid var(--line)}.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:20px;font-weight:900}.brand span{color:var(--accent)}.links{display:flex;gap:24px;color:var(--muted);font-size:14px}.links a:hover{color:#fff}
-.hero{padding:110px 0 100px;text-align:center;background:radial-gradient(circle at 50% 15%,rgba(139,124,255,.2),transparent 42%)}.badge{display:inline-block;padding:7px 13px;border:1px solid var(--line);border-radius:999px;color:#cbd2e2;font-size:13px}.hero h1{font-size:clamp(48px,8vw,88px);line-height:.98;letter-spacing:-.07em;margin:24px auto 20px;max-width:900px}.gradient{background:linear-gradient(100deg,#fff,#a99fff,#55dfff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:650px;margin:auto;color:var(--muted);font-size:18px}.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{padding:12px 19px;border-radius:11px;border:1px solid var(--line);font-weight:800}.primary{background:var(--accent);border:0}.ghost{background:rgba(255,255,255,.04)}
-section{padding:85px 0}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:#8490a7;font-weight:800}.head h2{font-size:clamp(34px,5vw,52px);letter-spacing:-.06em;margin:7px 0}.head p{color:var(--muted);max-width:650px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:25px;border:1px solid var(--line);border-radius:20px;background:var(--card)}.card h3{margin:0 0 8px;font-size:21px}.card p{color:var(--muted);margin:0 0 18px}.arrow{color:#bdb6ff;font-weight:800}.number{color:#68758e;font-size:11px;letter-spacing:.14em}
-.about{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.box{padding:32px;border:1px solid var(--line);border-radius:22px;background:var(--card)}.box h2{font-size:38px;line-height:1.05;letter-spacing:-.05em;margin:8px 0 15px}.box p{color:var(--muted)}.big{font-size:64px;font-weight:900;letter-spacing:-.08em}
-.team{grid-template-columns:repeat(4,1fr)}.person{cursor:pointer}.avatar{width:64px;height:64px;display:grid;place-items:center;border-radius:18px;background:linear-gradient(135deg,#8b7cff,#37d6ff);color:#07101d;font-size:23px;font-weight:900;margin-bottom:17px}.role{color:var(--muted);font-size:13px}
-.cta{text-align:center;padding:65px 25px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,rgba(139,124,255,.13),rgba(55,214,255,.05))}.cta h2{font-size:clamp(35px,5vw,55px);letter-spacing:-.06em;margin:8px 0}.cta p{color:var(--muted);max-width:600px;margin:auto}
-footer{border-top:1px solid var(--line);padding:30px 0;color:#7f8aa1;font-size:13px}.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.modal{position:fixed;inset:0;z-index:20;display:none;place-items:center;padding:20px;background:rgba(0,0,0,.75)}.modal.open{display:grid}.modal-box{width:min(650px,100%);background:#101625;border:1px solid var(--line);border-radius:24px;padding:30px;position:relative}.close{position:absolute;right:15px;top:15px;border:1px solid var(--line);background:#182033;color:#fff;border-radius:50%;width:38px;height:38px;cursor:pointer}.chips{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0}.chip{padding:6px 10px;border-radius:999px;background:rgba(139,124,255,.12);color:#c9c2ff;font-size:12px}
-@media(max-width:800px){.links{gap:12px}.grid,.team{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}}
-@media(max-width:520px){.wrap{width:min(100% - 28px,1100px)}.nav{height:60px}.links{display:none}.hero{padding:80px 0}.hero h1{font-size:52px}.grid,.team{grid-template-columns:1fr}.hero p{font-size:16px}section{padding:65px 0}}
+:root{--bg:#070a12;--card:#0f1523;--card2:#121a2b;--text:#f7f8ff;--muted:#9ba7bd;--accent:#8b7cff;--cyan:#42d9ff;--green:#63e6be;--line:rgba(255,255,255,.09);--max:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at 15% 0%,rgba(139,124,255,.12),transparent 30%),radial-gradient(circle at 90% 15%,rgba(66,217,255,.08),transparent 28%),var(--bg);color:var(--text);line-height:1.6}a{text-decoration:none;color:inherit}.wrap{max-width:var(--max);margin:auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:20;background:rgba(7,10,18,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{height:70px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:20px;font-weight:950;letter-spacing:-.05em}.brand span{color:var(--accent)}.links{display:flex;gap:22px;color:var(--muted);font-size:14px}.links a:hover{color:#fff}
+.hero{padding:105px 0 90px;text-align:center;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(139,124,255,.16),transparent 68%);left:50%;top:-250px;transform:translateX(-50%);pointer-events:none}.badge{position:relative;display:inline-flex;gap:8px;align-items:center;padding:8px 14px;border:1px solid var(--line);border-radius:999px;color:#cbd3e5;font-size:13px;background:rgba(255,255,255,.025)}.dot{width:7px;height:7px;background:var(--green);border-radius:50%}.hero h1{position:relative;font-size:clamp(50px,8vw,92px);line-height:.97;letter-spacing:-.075em;margin:25px auto 20px;max-width:950px}.gradient{background:linear-gradient(100deg,#fff,#aaa0ff,#55ddff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{position:relative;max-width:700px;margin:auto;color:var(--muted);font-size:18px}.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;padding:12px 19px;border-radius:11px;border:1px solid var(--line);font-weight:850}.primary{background:linear-gradient(135deg,var(--accent),#637fff);border:0}.ghost{background:rgba(255,255,255,.04)}
+.hero-stats{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:850px;margin:55px auto 0}.hero-stat{padding:17px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}.hero-stat b{display:block;font-size:25px}.hero-stat span{font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:#7e8ba3}
+section{padding:90px 0}.head{margin-bottom:35px}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.17em;color:#8793aa;font-weight:900}.head h2{font-size:clamp(35px,5vw,55px);letter-spacing:-.06em;margin:7px 0}.head p{color:var(--muted);max-width:690px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:26px;border:1px solid var(--line);border-radius:21px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));transition:.25s}.card:hover{transform:translateY(-5px);border-color:rgba(139,124,255,.4)}.card h3{margin:7px 0 8px;font-size:21px}.card p{color:var(--muted);margin:0 0 18px}.number{color:#68758e;font-size:11px;letter-spacing:.14em}.arrow{color:#bbb4ff;font-weight:850}
+.projects .card{min-height:235px;display:flex;flex-direction:column}.projects .arrow{margin-top:auto}
+.about-main{display:grid;grid-template-columns:1.15fr .85fr;gap:17px}.about-box{padding:34px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(139,124,255,.09),rgba(255,255,255,.025))}.about-box h2{font-size:42px;line-height:1.03;letter-spacing:-.055em;margin:8px 0 17px}.about-box p{color:var(--muted)}.quote{display:flex;flex-direction:column;justify-content:center}.quote .big{font-size:70px;font-weight:950;line-height:1;letter-spacing:-.08em}.quote h3{font-size:24px;margin:15px 0 5px}
+.about-features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:17px}.about-feature{padding:23px;border:1px solid var(--line);border-radius:19px;background:rgba(255,255,255,.025)}.about-feature .icon{font-size:25px}.about-feature h3{margin:9px 0 5px}.about-feature p{font-size:13px;color:var(--muted);margin:0}
+.values{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:17px}.value{padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--card)}.value b{display:block;margin-bottom:5px}.value span{font-size:12px;color:var(--muted)}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.step{padding:24px;border:1px solid var(--line);border-radius:20px;background:var(--card);position:relative}.step-num{color:var(--accent);font-weight:950;font-size:12px}.step h3{margin:8px 0}.step p{font-size:13px;color:var(--muted);margin:0}
+.team{grid-template-columns:repeat(4,1fr)}.person{cursor:pointer}.avatar{width:66px;height:66px;display:grid;place-items:center;border-radius:18px;background:linear-gradient(135deg,var(--accent),var(--cyan));color:#07101a;font-size:24px;font-weight:950;margin-bottom:17px}.role{color:var(--muted);font-size:13px}.hint{font-size:11px;color:#68758e;margin-top:15px}
+.services{grid-template-columns:repeat(3,1fr)}.service{padding:25px;border:1px solid var(--line);border-radius:20px;background:var(--card)}.service-icon{font-size:25px}.service h3{margin:10px 0 6px}.service p{font-size:13px;color:var(--muted);margin:0}
+.roadmap{display:grid;gap:12px}.milestone{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--card)}.milestone strong{color:#bdb6ff}.milestone p{margin:0;color:var(--muted);font-size:13px}
+.faq{display:grid;gap:10px;max-width:850px}.faq-item{border:1px solid var(--line);border-radius:16px;background:var(--card);overflow:hidden}.faq-q{width:100%;border:0;background:none;color:#fff;padding:17px 19px;text-align:left;font-weight:800;display:flex;justify-content:space-between;cursor:pointer}.faq-a{display:none;padding:0 19px 17px;color:var(--muted);font-size:13px}.faq-item.open .faq-a{display:block}
+.community{display:grid;grid-template-columns:1fr 1fr;gap:16px}.community-card{padding:32px;border:1px solid var(--line);border-radius:23px;background:linear-gradient(135deg,rgba(139,124,255,.1),rgba(255,255,255,.025))}.community-card h3{font-size:27px;margin:8px 0}.community-card p{color:var(--muted)}
+.cta{text-align:center;padding:70px 25px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(135deg,rgba(139,124,255,.13),rgba(66,217,255,.05))}.cta h2{font-size:clamp(36px,5vw,58px);letter-spacing:-.06em;margin:8px 0}.cta p{max-width:630px;margin:auto;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:32px 0;color:#7d899f;font-size:13px}.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.modal{position:fixed;inset:0;z-index:50;display:none;place-items:center;padding:20px;background:rgba(0,0,0,.78)}.modal.open{display:grid}.modal-box{width:min(650px,100%);background:#101726;border:1px solid var(--line);border-radius:25px;padding:32px;position:relative}.close{position:absolute;right:15px;top:15px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#182134;color:#fff;font-size:20px;cursor:pointer}.modal-box h2{font-size:36px;margin:5px 0}.modal-box p{color:var(--muted)}.chips{display:flex;gap:7px;flex-wrap:wrap}.chip{padding:6px 10px;border-radius:999px;background:rgba(139,124,255,.12);color:#c8c1ff;font-size:12px}
+@media(max-width:850px){.hero-stats,.process,.values{grid-template-columns:1fr 1fr}.grid,.team,.services{grid-template-columns:1fr 1fr}.about-main,.community{grid-template-columns:1fr}.about-features{grid-template-columns:1fr 1fr}.links{gap:12px}}
+@media(max-width:560px){.wrap{padding:0 16px}.links{display:none}.hero{padding:78px 0}.hero h1{font-size:52px}.hero p{font-size:16px}.hero-stats,.grid,.team,.services,.process,.values,.about-features{grid-template-columns:1fr}.hero-stat{padding:13px}.hero-stat b{font-size:22px}.milestone{grid-template-columns:1fr;gap:4px}section{padding:68px 0}.about-box h2{font-size:34px}}
 </style>
 </head>
 <body>
-<nav><div class="wrap nav"><a class="brand" href="#">Mythical<span> Studios</span></a><div class="links"><a href="#projects">Projects</a><a href="#about">About</a><a href="#team">Team</a><a href="#contact">Contact</a></div></div></nav>
+<nav><div class="wrap nav"><a class="brand" href="#">Mythical<span> Studios</span></a><div class="links"><a href="#about">About</a><a href="#projects">Projects</a><a href="#team">Team</a><a href="#services">Services</a><a href="#roadmap">Roadmap</a><a href="#contact">Contact</a></div></div></nav>
 
 <header class="hero"><div class="wrap">
-<span class="badge">Independent creative technology studio</span>
+<span class="badge"><i class="dot"></i> Independent creative technology studio</span>
 <h1>We build things that make the <span class="gradient">future feel real.</span></h1>
-<p>Mythical Studios creates AI, gaming, web and digital experiences with a small team that loves turning ideas into real projects.</p>
-<div class="buttons"><a class="btn primary" href="#projects">Explore projects</a><a class="btn ghost" href="#team">Meet the team</a></div>
+<p>Mythical Studios is a team-driven creative technology studio exploring AI, gaming, websites and digital experiences — one idea at a time.</p>
+<div class="buttons"><a class="btn primary" href="#projects">Explore projects</a><a class="btn ghost" href="#about">Discover Mythical</a></div>
+<div class="hero-stats"><div class="hero-stat"><b>3</b><span>Active projects</span></div><div class="hero-stat"><b>4</b><span>Team members</span></div><div class="hero-stat"><b>AI</b><span>Innovation focus</span></div><div class="hero-stat"><b>∞</b><span>Ideas ahead</span></div></div>
 </div></header>
 
-<section id="projects"><div class="wrap"><div class="head"><span class="eyebrow">What we're building</span><h2>Our projects.</h2><p>A few things we're currently creating and growing.</p></div>
+<section id="about"><div class="wrap">
+<div class="head"><span class="eyebrow">About Mythical Studios</span><h2>More than a name. It's a place to build.</h2><p>Mythical Studios brings together people who enjoy technology, creativity and the challenge of turning an idea into something real.</p></div>
+<div class="about-main">
+<div class="about-box"><span class="eyebrow">Who we are</span><h2>Small team. Big imagination.</h2><p>We are an independent creative technology studio working across artificial intelligence, gaming, web development and digital experiences.</p><p>We don't want to simply talk about future technology. We want to experiment with it, build with it and learn what makes it genuinely useful.</p><p>Some projects start as a tiny idea. Others grow into full platforms. Our approach stays the same: understand the idea, build a first version, learn from it and keep improving.</p></div>
+<div class="about-box quote"><span class="eyebrow">Our philosophy</span><div class="big">∞</div><h3>Build. Create. Imagine.</h3><p>There is always another idea worth exploring.</p></div>
+</div>
+<div class="about-features">
+<div class="about-feature"><div class="icon">⚡</div><h3>Build</h3><p>We turn concepts into working products and experiences instead of leaving them as ideas.</p></div>
+<div class="about-feature"><div class="icon">🧪</div><h3>Experiment</h3><p>We test new technology, interfaces and concepts to discover what actually works.</p></div>
+<div class="about-feature"><div class="icon">↗</div><h3>Improve</h3><p>Every version teaches us something. We use that learning to make the next version better.</p></div>
+</div>
+<div class="values">
+<div class="value"><b>Curiosity</b><span>Ask questions and explore new possibilities.</span></div>
+<div class="value"><b>Creativity</b><span>Look for original ways to solve problems.</span></div>
+<div class="value"><b>Teamwork</b><span>Build together and make everyone's ideas stronger.</span></div>
+<div class="value"><b>Progress</b><span>Keep moving, learning and improving.</span></div>
+</div>
+</div></section>
+
+<section id="projects"><div class="wrap projects"><div class="head"><span class="eyebrow">What we're building</span><h2>Our projects.</h2><p>Projects that represent different parts of the Mythical Studios universe.</p></div>
 <div class="grid">
-<a class="card" href="https://sparkagent.in.net" target="_blank" rel="noopener"><span class="number">01 / AI</span><h3>SparkAgent</h3><p>Our own AI project exploring useful artificial intelligence and digital experiences.</p><span class="arrow">Visit SparkAgent →</span></a>
-<a class="card" href="https://store.mythicalstudios.online" target="_blank" rel="noopener"><span class="number">02 / GAMING</span><h3>Mythical Studios Store</h3><p>Our Minecraft and gaming destination for the Mythical community.</p><span class="arrow">Visit Store →</span></a>
-<a class="card" href="https://mythicalstudios.info" target="_blank" rel="noopener"><span class="number">03 / STUDIO</span><h3>Mythical Studios</h3><p>The main home for our team, identity, projects and future ideas.</p><span class="arrow">Main site →</span></a>
+<a class="card" href="https://sparkagent.in.net" target="_blank" rel="noopener"><span class="number">01 / AI</span><h3>SparkAgent</h3><p>Our own AI project exploring useful artificial intelligence, tools and new digital experiences.</p><span class="arrow">Visit SparkAgent →</span></a>
+<a class="card" href="https://store.mythicalstudios.online" target="_blank" rel="noopener"><span class="number">02 / GAMING</span><h3>Mythical Studios Store</h3><p>The gaming and Minecraft side of Mythical Studios, built around our community and experiences.</p><span class="arrow">Visit Store →</span></a>
+<a class="card" href="https://mythicalstudios.info" target="_blank" rel="noopener"><span class="number">03 / STUDIO</span><h3>Mythical Studios</h3><p>The main home for the studio, our identity, projects and everything we create next.</p><span class="arrow">Main site →</span></a>
 </div></div></section>
 
-<section id="about"><div class="wrap"><div class="about"><div class="box"><span class="eyebrow">About us</span><h2>Ideas become real when a team builds them.</h2><p>Mythical Studios is an independent creative technology studio focused on experimenting, learning and building useful digital experiences.</p><p>We work across AI, gaming and the web, starting with ideas and turning them into things people can actually use.</p></div><div class="box"><span class="eyebrow">Our mindset</span><div class="big">∞</div><h3>Build. Create. Imagine.</h3><p>Start small. Learn fast. Keep improving.</p></div></div></div></section>
+<section><div class="wrap"><div class="head"><span class="eyebrow">How we work</span><h2>From idea to reality.</h2><p>Our simple process keeps projects moving without making creativity complicated.</p></div><div class="process">
+<div class="step"><span class="step-num">01</span><h3>Imagine</h3><p>We start with a question, problem or idea worth exploring.</p></div>
+<div class="step"><span class="step-num">02</span><h3>Build</h3><p>We create a first version and make the idea tangible.</p></div>
+<div class="step"><span class="step-num">03</span><h3>Test</h3><p>We use feedback and real usage to discover what needs changing.</p></div>
+<div class="step"><span class="step-num">04</span><h3>Improve</h3><p>We refine the experience and keep building toward something better.</p></div>
+</div></div></section>
 
-<section id="team"><div class="wrap"><div class="head"><span class="eyebrow">The people</span><h2>Meet the team.</h2><p>Click a team member to learn more.</p></div>
+<section id="team"><div class="wrap"><div class="head"><span class="eyebrow">The people behind it</span><h2>Meet the team.</h2><p>Different roles, one shared goal: build things we're proud of.</p></div>
 <div class="grid team">
-<div class="card person" data-person="chethan"><div class="avatar">C</div><h3>Chethan</h3><div class="role">Founder</div></div>
-<div class="card person" data-person="vijay"><div class="avatar">V</div><h3>Vijay</h3><div class="role">Co-Owner</div></div>
-<div class="card person" data-person="venkat"><div class="avatar">V</div><h3>Venkat</h3><div class="role">Manager</div></div>
-<div class="card person" data-person="kedar"><div class="avatar">K</div><h3>Kedar</h3><div class="role">Manager</div></div>
+<div class="card person" data-person="chethan"><div class="avatar">C</div><h3>Chethan</h3><div class="role">Founder</div><div class="hint">View profile →</div></div>
+<div class="card person" data-person="vijay"><div class="avatar">V</div><h3>Vijay</h3><div class="role">Co-Owner</div><div class="hint">View profile →</div></div>
+<div class="card person" data-person="venkat"><div class="avatar">V</div><h3>Venkat</h3><div class="role">Manager</div><div class="hint">View profile →</div></div>
+<div class="card person" data-person="kedar"><div class="avatar">K</div><h3>Kedar</h3><div class="role">Manager</div><div class="hint">View profile →</div></div>
 </div></div></section>
 
-<section id="contact"><div class="wrap"><div class="cta"><span class="eyebrow">Let's build</span><h2>Have an idea?</h2><p>We're always interested in interesting projects, experiments and collaborations.</p><div class="buttons"><a class="btn primary" href="mailto:?subject=Hello%20Mythical%20Studios">Contact us</a><a class="btn ghost" href="https://discord.gg/tzVTqK8Yt" target="_blank" rel="noopener">Join Discord</a></div></div></div></section>
+<section id="services"><div class="wrap"><div class="head"><span class="eyebrow">What we do</span><h2>Areas we explore.</h2><p>Our work sits at the intersection of technology, creativity and digital experiences.</p></div>
+<div class="grid services">
+<div class="service"><div class="service-icon">🤖</div><h3>AI Experiences</h3><p>Exploring practical AI products, assistants, tools and interfaces.</p></div>
+<div class="service"><div class="service-icon">🎮</div><h3>Gaming</h3><p>Building gaming projects, Minecraft experiences and community-focused ideas.</p></div>
+<div class="service"><div class="service-icon">🌐</div><h3>Web Experiences</h3><p>Creating websites and digital platforms that feel modern and useful.</p></div>
+<div class="service"><div class="service-icon">💡</div><h3>Product Ideas</h3><p>Taking early concepts and turning them into experiments and prototypes.</p></div>
+<div class="service"><div class="service-icon">🎨</div><h3>Creative Direction</h3><p>Shaping identities, interfaces and experiences around a clear vision.</p></div>
+<div class="service"><div class="service-icon">🧪</div><h3>Experimentation</h3><p>Trying new technologies and concepts to discover what comes next.</p></div>
+</div></div></section>
+
+<section id="roadmap"><div class="wrap"><div class="head"><span class="eyebrow">Where we're going</span><h2>The Mythical roadmap.</h2><p>A simple view of how the studio is growing.</p></div><div class="roadmap">
+<div class="milestone"><strong>Foundation</strong><p>Build the studio identity, team and core online presence.</p></div>
+<div class="milestone"><strong>Products</strong><p>Develop projects like SparkAgent and our gaming ecosystem into stronger experiences.</p></div>
+<div class="milestone"><strong>Expansion</strong><p>Explore new technologies, communities and creative digital products.</p></div>
+<div class="milestone"><strong>What's next?</strong><p>More experiments, more projects and ideas that haven't been built yet.</p></div>
+</div></div></section>
+
+<section><div class="wrap"><div class="head"><span class="eyebrow">Questions</span><h2>Frequently asked.</h2></div><div class="faq">
+<div class="faq-item"><button class="faq-q">What is Mythical Studios?<span>+</span></button><div class="faq-a">Mythical Studios is an independent creative technology studio focused on AI, gaming, web experiences and experimentation.</div></div>
+<div class="faq-item"><button class="faq-q">What is SparkAgent?<span>+</span></button><div class="faq-a">SparkAgent is Mythical Studios' own AI project, focused on exploring useful artificial intelligence and digital tools.</div></div>
+<div class="faq-item"><button class="faq-q">What does the team build?<span>+</span></button><div class="faq-a">The team works on AI projects, gaming and Minecraft experiences, websites, digital products and experimental ideas.</div></div>
+<div class="faq-item"><button class="faq-q">Can I work with Mythical Studios?<span>+</span></button><div class="faq-a">Yes. You can contact the studio through the contact section or join the community to follow what we're building.</div></div>
+</div></div></section>
+
+<section id="community"><div class="wrap"><div class="head"><span class="eyebrow">Join the journey</span><h2>Be part of what's next.</h2><p>Follow Mythical Studios and see what we're building, testing and sharing.</p></div><div class="community">
+<div class="community-card"><span class="eyebrow">YouTube</span><h3>The Mythical Network</h3><p>Follow the network for videos, projects and future content.</p><a class="btn primary" href="https://youtube.com/@TheMythicalNetwork" target="_blank" rel="noopener">Open YouTube →</a></div>
+<div class="community-card"><span class="eyebrow">Discord</span><h3>Join the community</h3><p>Connect with the community and keep up with Mythical projects.</p><a class="btn primary" href="https://discord.gg/tzVTqK8Yt" target="_blank" rel="noopener">Join Discord →</a></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="cta"><span class="eyebrow">Let's build</span><h2>Have an idea?</h2><p>Whether it's an AI concept, a game idea, a website or something completely different, we'd love to hear about it.</p><div class="buttons"><a class="btn primary" href="mailto:?subject=Hello%20Mythical%20Studios">Contact Mythical Studios</a><a class="btn ghost" href="#projects">Explore projects again</a></div></div></div></section>
 
 <footer><div class="wrap footer"><span>© 2026 <strong>Mythical Studios</strong></span><span>Build. Create. Imagine.</span></div></footer>
 
-<div class="modal" id="modal"><div class="modal-box"><button class="close" id="close" aria-label="Close">×</button><span class="eyebrow" id="mrole"></span><h2 id="mname"></h2><p id="mcopy"></p><div class="chips" id="mchips"></div></div></div>
+<div class="modal" id="modal"><div class="modal-box"><button class="close" id="close">×</button><span class="eyebrow" id="mrole"></span><h2 id="mname"></h2><p id="mcopy"></p><div class="chips" id="mchips"></div></div></div>
 
 <script>
 const people={
@@ -62,10 +126,9 @@ venkat:{name:"Venkat",role:"Manager",copy:"Helps coordinate projects and support
 kedar:{name:"Kedar",role:"Manager",copy:"Supports day-to-day project coordination and helps keep plans, people and work connected.",chips:["Management","Projects","Organization","Teamwork"]}
 };
 const modal=document.getElementById("modal");
-document.querySelectorAll(".person").forEach(card=>card.onclick=()=>{const p=people[card.dataset.person];document.getElementById("mrole").textContent=p.role;document.getElementById("mname").textContent=p.name;document.getElementById("mcopy").textContent=p.copy;document.getElementById("mchips").innerHTML=p.chips.map(x=>"<span class='chip'>"+x+"</span>").join("");modal.classList.add("open")});
-document.getElementById("close").onclick=()=>modal.classList.remove("open");
-modal.onclick=e=>{if(e.target===modal)modal.classList.remove("open")};
-document.onkeydown=e=>{if(e.key==="Escape")modal.classList.remove("open")};
+document.querySelectorAll(".person").forEach(card=>card.onclick=()=>{const p=people[card.dataset.person];mrole.textContent=p.role;mname.textContent=p.name;mcopy.textContent=p.copy;mchips.innerHTML=p.chips.map(x=>"<span class='chip'>"+x+"</span>").join("");modal.classList.add("open")});
+close.onclick=()=>modal.classList.remove("open");modal.onclick=e=>{if(e.target===modal)modal.classList.remove("open")};document.onkeydown=e=>{if(e.key==="Escape")modal.classList.remove("open")};
+document.querySelectorAll(".faq-q").forEach(q=>q.onclick=()=>q.parentElement.classList.toggle("open"));
 </script>
 </body>
 </html>
