@@ -149,10 +149,30 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:#7d899f;font-size:1
 
 <script>
 const people={
-chethan:{name:"Chethan",role:"Founder",copy:"Leads Mythical Studios and drives the studio's overall direction, ideas and product vision.",chips:["Leadership","Product","Ideas","Innovation"]},
-vijay:{name:"Vijay",role:"Co-Owner",copy:"Works alongside the founder on projects, decisions, growth and the long-term direction of Mythical Studios.",chips:["Strategy","Teamwork","Growth","Projects"]},
-venkat:{name:"Venkat",role:"Manager",copy:"Helps coordinate projects and supports the team so work stays organized and moves forward.",chips:["Management","Coordination","Planning","Support"]},
-kedar:{name:"Kedar",role:"Manager",copy:"Supports day-to-day project coordination and helps keep plans, people and work connected.",chips:["Management","Projects","Organization","Teamwork"]}
+chethan:{
+name:"Chethan",role:"Founder",
+copy:"Chethan is the founder of Mythical Studios and helps shape the vision behind the studio. He leads the overall direction of the team, turns early ideas into projects and helps decide what Mythical should build next. From AI experiments to websites and digital products, he focuses on keeping the studio creative, ambitious and always moving forward.",
+chips:["Leadership","Product Vision","Innovation","AI","Creative Direction","Strategy"],
+extra:"Founder · Vision & Direction"
+},
+vijay:{
+name:"Vijay",role:"Co-Owner",
+copy:"Vijay works closely with the founder across Mythical Studios and contributes to the studio's growth, projects and long-term plans. He helps turn ideas into practical plans, supports important decisions and works with the team to keep projects progressing. His role connects the creative side of Mythical with the work needed to make ideas happen.",
+chips:["Co-Ownership","Strategy","Growth","Planning","Teamwork","Projects"],
+extra:"Co-Owner · Strategy & Growth"
+},
+venkat:{
+name:"Venkat",role:"Manager",
+copy:"Venkat helps keep Mythical Studios projects organized and moving. As a manager, he supports coordination between people, tasks and project goals. He helps the team stay focused, follows up on progress and contributes to making sure ideas don't stop at the planning stage but continue toward real results.",
+chips:["Management","Coordination","Planning","Organization","Team Support","Execution"],
+extra:"Manager · Coordination & Operations"
+},
+kedar:{
+name:"Kedar",role:"Manager",
+copy:"Kedar supports the team through project coordination, organization and day-to-day collaboration. He helps connect people with the work that needs to be done, keeps track of project progress and contributes to a productive team environment. His role helps Mythical Studios stay organized while continuing to experiment and build.",
+chips:["Management","Projects","Organization","Teamwork","Coordination","Execution"],
+extra:"Manager · Projects & Teamwork"
+}
 };
 const modal=document.getElementById("modal");
 document.querySelectorAll(".person").forEach(card=>card.onclick=()=>{const p=people[card.dataset.person];mrole.textContent=p.role;mname.textContent=p.name;mcopy.textContent=p.copy;mchips.innerHTML=p.chips.map(x=>"<span class='chip'>"+x+"</span>").join("");modal.classList.add("open")});
