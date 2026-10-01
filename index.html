@@ -175,7 +175,7 @@ extra:"Manager · Projects & Teamwork"
 }
 };
 const modal=document.getElementById("modal");
-document.querySelectorAll(".person").forEach(card=>card.onclick=()=>{const p=people[card.dataset.person];mrole.textContent=p.role;mname.textContent=p.name;mcopy.textContent=p.copy;mchips.innerHTML=p.chips.map(x=>"<span class='chip'>"+x+"</span>").join("");modal.classList.add("open")});
+document.querySelectorAll(".person").forEach(card=>card.onclick=()=>{const p=people[card.dataset.person];mrole.textContent=p.role+" · "+p.extra;mname.textContent=p.name;mcopy.textContent=p.copy;mchips.innerHTML=p.chips.map(x=>"<span class='chip'>"+x+"</span>").join("");modal.classList.add("open")});
 close.onclick=()=>modal.classList.remove("open");modal.onclick=e=>{if(e.target===modal)modal.classList.remove("open")};document.onkeydown=e=>{if(e.key==="Escape")modal.classList.remove("open")};
 document.querySelectorAll(".faq-q").forEach(q=>q.onclick=()=>q.parentElement.classList.toggle("open"));
 </script>
